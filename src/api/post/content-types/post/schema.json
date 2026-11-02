@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "cover": {
       "type": "media",
@@ -21,10 +22,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "content": {
-      "type": "blocks",
-      "required": true
     },
     "slug": {
       "type": "uid",
@@ -42,6 +39,10 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
